@@ -36,12 +36,12 @@ function App() {
 
   return (
     <main className='h-fit w-full font-mono'>
-      <div
+      {/* <div
         ref={LoadRef}
         className="fixed h-screen w-full bg-black flex items-center justify-center z-[9999]"
       >
         <Loading />
-      </div>
+      </div> */}
 
       <div ref={homepageRef} className="bg-white h-full w-full font-mono">
         <Homepage />
