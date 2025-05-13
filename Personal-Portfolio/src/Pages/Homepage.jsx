@@ -4,6 +4,7 @@ import Navbar from '../Sections/Navbar'
 import Hero from '../Sections/Hero'
 import About from '../Sections/About'
 import Skills from '../Sections/Skills'
+import Projects from '../Sections/Projects'
 
 const Homepage = () => {
   return (
@@ -21,7 +22,7 @@ const Homepage = () => {
         <Skills />
       </section>
       <section className='h-fit w-full'>
-        Projects
+        <Projects />
       </section>
       <section className='h-fit w-full'>
         Contact
