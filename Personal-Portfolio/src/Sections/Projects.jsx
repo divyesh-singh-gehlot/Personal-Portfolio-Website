@@ -10,7 +10,7 @@ const Projects = () => {
     const items = [
   {
     image: 'https://www.shutterstock.com/image-vector/support-icon-can-be-used-600nw-1887496465.jpg',
-    link: 'https://connectify-zn4n.vercel.app/login',
+    link: 'https://connectify-zn4n.vercel.app/',
     title: 'Project 1',
     description: 'Connectify - Chatroom Webapp'
   },
