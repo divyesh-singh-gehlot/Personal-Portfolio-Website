@@ -2,28 +2,29 @@ import React from 'react'
 
 import Navbar from '../Sections/Navbar'
 import Hero from '../Sections/Hero'
+import About from '../Sections/About'
 
 const Homepage = () => {
   return (
     <div className='bg-black text-white'>
-      <div className='h-fit w-full'>
+      <section className='h-fit w-full'>
         <Navbar />
-      </div>
-      <div className='h-fit w-full'>
+      </section>
+      <section className='h-fit w-full'>
         <Hero />
-      </div>
-      <div className='h-fit w-full'>
-        About
-      </div>
-      <div className='h-fit w-full'>
+      </section>
+      <section className='h-fit w-full'>
+        <About />
+      </section>
+      <section className='h-fit w-full'>
         Skills
-      </div>
-      <div className='h-fit w-full'>
+      </section>
+      <section className='h-fit w-full'>
         Projects
-      </div>
-      <div className='h-fit w-full'>
+      </section>
+      <section className='h-fit w-full'>
         Contact
-      </div>
+      </section>
     </div>
   )
 }
