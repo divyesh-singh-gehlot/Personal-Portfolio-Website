@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import Particles from '../Components/Particles';
 import RotatingText from '../Components/RotatingText';
@@ -7,7 +7,7 @@ import Dock from '../Components/Dock';
 
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 
-import divyesh from '../assets/HomePage/Hero/Divyesh.jpg'
+import divyesh from '../assets/HomePage/Hero/Divyesh.jpg';
 
 const Hero = () => {
 
@@ -24,9 +24,8 @@ const Hero = () => {
         },
     ];
 
-
     return (
-        <div className="relative h-[90vh] w-full overflow-hidden bg-black text-white">
+        <div className="relative min-h-screen w-full overflow-hidden bg-black text-white">
             <div className="absolute inset-0 z-0">
                 <Particles
                     particleColors={['#ffffff', '#ffffff']}
@@ -40,16 +39,29 @@ const Hero = () => {
                 />
             </div>
 
-            <div className="relative z-20 flex flex-col md:flex-row justify-center items-center h-full px-6 md:px-12 gap-48 -translate-y-20">
-                {/* Left Text Section */}
-                <div className="text-left max-w-xl space-y-4 md:mr-4">
-                    <h1 className="text-4xl md:text-5xl font-bold">Hi There,</h1>
-                    <h1 className="text-4xl md:text-5xl font-bold">I am Divyesh Gehlot</h1>
-                    <div className="flex items-center gap-3 text-xl md:text-2xl font-semibold">
+            <div className="relative z-20 flex flex-col justify-center items-center h-full px-4 sm:px-6 md:px-12 gap-10 pt-20 pb-10">
+                <div className="relative w-[240px] sm:w-[280px] md:w-[320px] h-[240px] sm:h-[280px] md:h-[320px] flex items-center justify-center">
+                    <Orb
+                        hoverIntensity={0.5}
+                        rotateOnHover={true}
+                        hue={0}
+                        forceHoverState={false}
+                    />
+                    <img
+                        src={divyesh}
+                        alt="Divyesh"
+                        className="absolute w-[160px] sm:w-[200px] md:w-[240px] h-[160px] sm:h-[200px] md:h-[240px] rounded-full object-cover shadow-lg"
+                    />
+                </div>
+
+                <div className="text-center max-w-xl space-y-4">
+                    <h1 className="text-3xl sm:text-4xl font-bold">Hi There,</h1>
+                    <h1 className="text-3xl sm:text-4xl font-bold">I am Divyesh Gehlot</h1>
+                    <div className="flex flex-col sm:flex-row justify-center items-center gap-2 text-lg sm:text-xl font-semibold">
                         <span>I am into</span>
                         <RotatingText
                             texts={['Web Development', 'App Development', 'Graphic Designing', 'Video Editing']}
-                            mainClassName="text-xl md:text-2xl px-2 md:px-4 py-1 md:py-1.5 bg-cyan-300 text-black rounded-lg overflow-hidden"
+                            mainClassName="text-lg sm:text-xl px-3 py-1 bg-cyan-300 text-black rounded-lg"
                             staggerFrom={"last"}
                             initial={{ y: "100%" }}
                             animate={{ y: 0 }}
@@ -63,31 +75,18 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <Dock
+                <div className="mt-2">
+                    <Dock
                         items={items}
-                        panelHeight={68}
-                        baseItemSize={50}
-                        magnification={70}
-                        className='absolute'
-                    />
-
-                {/* Right Orb + Image Section */}
-                <div className="relative w-[440px] h-[440px] flex items-center justify-center">
-                    <Orb
-                        hoverIntensity={0.5}
-                        rotateOnHover={true}
-                        hue={0}
-                        forceHoverState={false}
-                    />
-                    <img
-                        src={divyesh}
-                        alt="Divyesh"
-                        className="absolute w-[300px] h-[300px] rounded-full object-cover shadow-lg"
+                        panelHeight={60}
+                        baseItemSize={40}
+                        magnification={60}
+                        className="hover:cursor-pointer"
                     />
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Hero
+export default Hero;
