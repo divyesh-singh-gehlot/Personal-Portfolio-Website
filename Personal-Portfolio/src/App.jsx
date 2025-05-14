@@ -35,7 +35,7 @@ function App() {
   }, []);
 
   return (
-    <main className='h-fit w-full font-mono'>
+    <main className='h-fit w-full font-mono bg-black'>
       <div
         ref={LoadRef}
         className="fixed h-screen w-full bg-black flex items-center justify-center z-[9999]"

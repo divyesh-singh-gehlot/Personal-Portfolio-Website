@@ -47,7 +47,7 @@ const Projects = () => {
 ];
 
   return (
-    <div className="w-full">
+    <div id='projects' className="w-full">
             <ScrollFloat
                 animationDuration={1}
                 ease='back.inOut(2)'

@@ -5,6 +5,8 @@ import Hero from '../Sections/Hero'
 import About from '../Sections/About'
 import Skills from '../Sections/Skills'
 import Projects from '../Sections/Projects'
+import Contact from '../Sections/Contact'
+import Footer from '../Sections/Footer'
 
 const Homepage = () => {
   return (
@@ -21,11 +23,14 @@ const Homepage = () => {
       <section className='h-fit w-full'>
         <Skills />
       </section>
-      <section className='h-fit w-full'>
+      <section className='h-fit w-full rounded-b-3xl'>
         <Projects />
       </section>
       <section className='h-fit w-full'>
-        Contact
+        <Contact />
+      </section>
+      <section className='h-fit w-full'>
+        <Footer />
       </section>
     </div>
   )

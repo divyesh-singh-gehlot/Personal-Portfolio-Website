@@ -918,87 +918,89 @@ export default function InfiniteMenu({ items = [] }) {
 
   return (
     <div className="relative w-full h-full">
-      <canvas
-        id="infinite-grid-menu-canvas"
-        ref={canvasRef}
-        className="cursor-grab w-full h-full overflow-hidden relative outline-none active:cursor-grabbing"
-      />
+  <canvas
+    id="infinite-grid-menu-canvas"
+    ref={canvasRef}
+    className="cursor-grab w-full h-full overflow-hidden relative outline-none active:cursor-grabbing"
+  />
 
-      {activeItem && (
-        <>
-          {/* Title */}
-          <h2
-            className={`
+  {activeItem && (
+    <>
+      {/* Title */}
+      <h2
+        className={`
           select-none
           absolute
           font-black
-          [font-size:4rem]
-          left-[1.6em]
-          top-1/2
+          text-4xl sm:text-5xl md:text-6xl lg:text-[4rem]
+          top-10 left-20 sm:left-10 lg:left-[1.6em] md:top-1/2 lg:top-1/2
           transform
-          translate-x-[20%]
+          translate-x-[10%] sm:translate-x-[15%] lg:translate-x-[20%]
           -translate-y-1/2
           transition-all
           ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
           ${isMoving
-                ? 'opacity-0 pointer-events-none duration-[100ms]'
-                : 'opacity-100 pointer-events-auto duration-[500ms]'
-              }
+            ? 'opacity-0 pointer-events-none duration-[100ms]'
+            : 'opacity-100 pointer-events-auto duration-[500ms]'
+          }
         `}
-          >
-            {activeItem.title}
-          </h2>
+      >
+        {activeItem.title}
+      </h2>
 
-          {/* Description */}
-          <p
-            className={`
+      {/* Description */}
+      <p
+        className={`
           select-none
           absolute
-          max-w-[10ch]
-          text-[1.5rem]
-          top-1/2
-          right-[1%]
+          max-w-[18ch] sm:max-w-[14ch] md:max-w-[12ch] lg:max-w-[10ch]
+          text-lg sm:text-xl md:text-2xl lg:text-[2rem] top-5/5 left-1/2 md:left-4/5 lg:left- md:top-1/2 lg:top-1/2 sm:right-6 md:right-[1%]
           transition-all
           ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
+          font-bold
+          text-right
           ${isMoving
-                ? 'opacity-0 pointer-events-none duration-[100ms] translate-x-[-60%] -translate-y-1/2'
-                : 'opacity-100 pointer-events-auto duration-[500ms] translate-x-[-90%] -translate-y-1/2'
-              }
+            ? 'opacity-0 pointer-events-none duration-[100ms] translate-x-[-60%] -translate-y-1/2'
+            : 'opacity-100 pointer-events-auto duration-[500ms] translate-x-[-90%] -translate-y-1/2'
+          }
         `}
-          >
-            {activeItem.description}
-          </p>
+      >
+        {activeItem.description}
+      </p>
 
-          {/* Action Button */}
-          <div
-            onClick={handleButtonClick}
-            className={`
+      {/* Action Button */}
+      <div
+        onClick={handleButtonClick}
+        className={`
           absolute
+          top-3/5
+          md:top-4/5
+          lg:top-4/5
           left-1/2
           z-10
-          w-[60px]
-          h-[60px]
+          w-12 h-12 sm:w-[60px] sm:h-[60px]
           grid
           place-items-center
           bg-[#00ffff]
-          border-[5px]
+          border-[4px] sm:border-[5px]
           border-black
           rounded-full
           cursor-pointer
           transition-all
           ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
           ${isMoving
-                ? 'bottom-[-80px] opacity-0 pointer-events-none duration-[100ms] scale-0 -translate-x-1/2'
-                : 'bottom-[3.8em] opacity-100 pointer-events-auto duration-[500ms] scale-100 -translate-x-1/2'
-              }
+            ? 'bottom-[-80px] opacity-0 pointer-events-none duration-[100ms] scale-0 -translate-x-1/2'
+            : 'bottom-10 sm:bottom-[3.8em] opacity-100 pointer-events-auto duration-[500ms] scale-100 -translate-x-1/2'
+          }
         `}
-          >
-            <p className="select-none relative text-[#060606] top-[2px] text-[26px]">
-              &#x2197;
-            </p>
-          </div>
-        </>
-      )}
-    </div>
+      >
+        <p className="select-none text-xl sm:text-[26px] text-[#060606] relative top-[1px] sm:top-[2px]">
+          &#x2197;
+        </p>
+      </div>
+    </>
+  )}
+</div>
+
   );
 }

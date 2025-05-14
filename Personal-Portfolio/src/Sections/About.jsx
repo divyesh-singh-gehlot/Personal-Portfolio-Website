@@ -7,7 +7,7 @@ import MagnetLines from '../Components/MagnetLines';
 
 const About = () => {
   return (
-    <div>
+    <div id='about'>
       <div className='py-5'>
         <Aurora
           colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
@@ -44,7 +44,7 @@ const About = () => {
           />
         </div>
 
-        <div className='w-full lg:w-1/2'>
+        <div className='w-full pl-10 lg:w-1/2 lg:pl-0'>
           <ScrollReveal
             baseOpacity={0.4}
             enableBlur={true}

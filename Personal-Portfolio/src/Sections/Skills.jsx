@@ -4,7 +4,7 @@ import CircularGallery from '../Components/CircularGallery';
 
 const Skills = () => {
     return (
-        <div className="w-full">
+        <div id='skills' className="w-full">
             <ScrollFloat
                 animationDuration={1}
                 ease='back.inOut(2)'
@@ -16,7 +16,7 @@ const Skills = () => {
                 Skills
             </ScrollFloat>
             <div className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] xl:h-screen">
-                <CircularGallery bend={-5} textColor="#ffffff" borderRadius={0.05} />
+                <CircularGallery bend={-2} textColor="#ffffff" borderRadius={0.05} />
             </div>
         </div>
     );

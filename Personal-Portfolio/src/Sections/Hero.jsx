@@ -24,7 +24,7 @@ const Hero = () => {
     ];
 
     return (
-        <div className="relative h-screen w-full overflow-hidden bg-black text-white">
+        <div id='hero' className="relative h-screen w-full overflow-hidden bg-black text-white">
             <div className="absolute inset-0 z-0">
                 <Particles
                     particleColors={['#ffffff', '#ffffff']}
