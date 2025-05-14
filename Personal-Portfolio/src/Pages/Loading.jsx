@@ -34,7 +34,7 @@ const Loading = () => {
                 />
             </div>
 
-            <div className="absolute bottom-10 right-10 sm:bottom-8 sm:right-8 md:bottom-16 md:right-16 z-10">
+            <div className="absolute bottom-24 right-10 md:bottom-16 md:right-16 z-10">
                 <CountUp
                     from={0}
                     to={100}
