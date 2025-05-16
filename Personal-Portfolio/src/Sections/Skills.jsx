@@ -1,10 +1,22 @@
 import React from 'react';
+
 import ScrollFloat from '../Components/ScrollFloat';
 import CircularGallery from '../Components/CircularGallery';
+import Aurora from '../Components/Aurora';
 
 const Skills = () => {
     return (
         <div id='skills' className="w-full">
+
+            <div className='py-5'>
+                <Aurora
+                    colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
+                    blend={10.0}
+                    amplitude={2.0}
+                    speed={1.0}
+                />
+            </div>
+
             <ScrollFloat
                 animationDuration={1}
                 ease='back.inOut(2)'

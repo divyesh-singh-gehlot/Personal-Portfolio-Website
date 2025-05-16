@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Particles from '../Components/Particles';
 import RotatingText from '../Components/RotatingText';
 import Orb from '../Components/Orb';

@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
+
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+
 import CountUp from "../Components/CountUp";
 import GridDistortion from '../Components/GridDistortion';
 import lpBg from '../assets/Loading-Page-Image/lpBg.png'
